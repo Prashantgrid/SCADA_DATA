@@ -1,0 +1,14 @@
+[
+  {
+    "relative_path": "documentation/NIST_PV_data_dictionary.pdf",
+    "url": "https://www.nist.gov/system/files/documents/2017/10/04/datadictionary_supplementalcontent.pdf",
+    "size": 232151,
+    "sha256": "e18eed11be12b085e34637105dec6dd70120aaf1a7d05d8caa8d256e43900bef"
+  },
+  {
+    "relative_path": "documentation/Boyd_2017_dataset_description.pdf",
+    "url": "https://nvlpubs.nist.gov/nistpubs/jres/122/jres.122.040.pdf",
+    "size": 99768,
+    "sha256": "7d18692a7b128cd8c52a8846cb4166c311c9fc4c54fe541f92e58c83a30150df"
+  }
+]
