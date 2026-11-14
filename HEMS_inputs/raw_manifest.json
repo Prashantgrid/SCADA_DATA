@@ -1,0 +1,46 @@
+[
+  {
+    "filename": "BDEW_H25_G25_L25_P25_S25.xlsx",
+    "url": "https://raw.githubusercontent.com/cran/standardlastprofile/5f6969ca8fa5036c1a470e65cc4b15e9baa52141/inst/extdata/BDEW_H25_G25_L25_P25_S25.xlsx",
+    "bytes": 485550,
+    "algorithm": "sha256",
+    "digest": "da5b77be3499c85bf9140f07233cb7808f79c210bfdd26a4c3300d9d5dcc6962"
+  },
+  {
+    "filename": "id_opendata_86.json",
+    "url": "https://ffeopendatastorage.blob.core.windows.net/opendata/id_opendata_86/id_opendata_86.json",
+    "bytes": 40396804,
+    "algorithm": "sha256",
+    "digest": "66a5e2c27fa63e75d28ab3062f07c87a66bd22ff48b15375891aa94597dffcd4"
+  },
+  {
+    "filename": "id_opendata_86_metadata.json",
+    "url": "https://ffeopendatastorage.blob.core.windows.net/opendata/id_opendata_86/id_opendata_86_metadata.json",
+    "bytes": 9488,
+    "algorithm": "sha256",
+    "digest": "8392f8cde6b302182318d77287475f9fdb1b067b84d8f71b93f09578d4abf16b"
+  },
+  {
+    "filename": "datapackage.json",
+    "url": "https://zenodo.org/records/5642902/files/datapackage.json?download=1",
+    "bytes": 93636,
+    "algorithm": "md5",
+    "digest": "7c61d6534c30297660ba051041da3324"
+  },
+  {
+    "filename": "2019_data_15min.hdf5",
+    "url": "https://zenodo.org/records/5642902/files/2019_data_15min.hdf5?download=1",
+    "bytes": 459112136,
+    "algorithm": "md5",
+    "digest": "f8971419fa5138c9e69be58a79e2e5a8",
+    "split": true
+  },
+  {
+    "filename": "2020_data_15min.hdf5",
+    "url": "https://zenodo.org/records/5642902/files/2020_data_15min.hdf5?download=1",
+    "bytes": 447784216,
+    "algorithm": "md5",
+    "digest": "404468c09dd4cb467828144fce6378c2",
+    "split": true
+  }
+]

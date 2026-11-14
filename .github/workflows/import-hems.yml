@@ -1,0 +1,46 @@
+name: Import verified HEMS source data
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/import-hems.yml
+      - scripts/import_raw_hems.py
+      - HEMS_inputs/raw_manifest.json
+
+permissions:
+  contents: write
+
+concurrency:
+  group: import-hems-source-data
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            scripts
+            HEMS_inputs
+          sparse-checkout-cone-mode: true
+      - name: Download and verify publisher files
+        run: python3 scripts/import_raw_hems.py
+      - name: Commit verified originals
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add HEMS_inputs/raw/
+          if git diff --cached --quiet; then
+            echo "The original files are already committed."
+            exit 0
+          fi
+          git commit -m "Add verified raw HEMS study inputs from BDEW, FfE and WPuQ"
+          git pull --rebase origin main
+          git -c pack.threads=2 -c pack.window=0 push origin HEAD:main
