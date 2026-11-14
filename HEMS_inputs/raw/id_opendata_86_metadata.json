@@ -1,0 +1,207 @@
+{
+  "id_opendata": 86,
+  "title": "Electric Load Profiles and Vehicle Data of Private Households with a Bidirectional EV",
+  "oep_metadata": {
+    "name": "id_opendata=86",
+    "title": "Electric Load Profiles and Vehicle Data of Private Households with a Bidirectional EV",
+    "description": "Time series containing load measurements at the grid connection point (positive for consumption), the PV system (if available) and the EV charging station (positive for charging). The household load is derived from these values. The connector status shows if the EV is plugged in at the respective time. The SoC transmitted by the EV is also included. If the EV is plugged in or the SoC was transmitted, the target-SoC is given. Prior to the scheduled departure time the target-SoC defaults to the respective minimum-SoC. Then it switches to the target SoC set by the customer, thus implicitly including the scheduled departure time. Some pilot customers have special features, like additional consumer appliances or stationary battery storage units. However, these are not measured separately. Customers with IDs 2, 4, and 17 have stationary battery storage units, while customer 10 has a fuel cell. Customers 2 and 4 were therefore excluded from our in-depth evaluation of the PV UC but are included in this data set. Furthermore, customer 17 has an incorrect metering concept, which is why household consumption cannot be calculated in the same way as for the other customers.",
+    "language": [
+      "en-GB",
+      "en-US",
+      "de-DE"
+    ],
+    "keywords": [
+      "bidirectional charging",
+      "electric vehicles",
+      "field trial",
+      "load profiles",
+      "private customers"
+    ],
+    "publicationDate": "2023-05-23",
+    "context": {
+      "homepage": "https://www.bdl-projekt.de/",
+      "documentation": "http://opendata.ffe.de/dataset/electric-load-profiles-and-vehicle-data-of-private-households-with-a-bidirectional-ev",
+      "sourceCode": null,
+      "contact": "https://www.ffe.de/team/adrian-ostermann-m-sc/",
+      "grantNo": "01MV21UN11",
+      "fundingAgency": "Bundesministerium f\u00fcr Wirtschaft und Klimaschutz der Bundesrepublik Deutschland",
+      "fundingAgencyLogo": "http://opendata.ffe.de/wp-content/uploads/2023/05/BMWK-Foerderlogo-deutsch-283x300.png",
+      "publisherLogo": "https://www.ffe.de/wp-content/uploads/2021/10/Logo-dunkelblau-Breite-600-px.png"
+    },
+    "spatial": {
+      "location": null,
+      "extent": null,
+      "resolution": null
+    },
+    "temporal": {
+      "referenceDate": [
+        "2021-01-01",
+        "2022-01-01"
+      ],
+      "timeseries": {
+        "start": null,
+        "end": null,
+        "resolution": "15 minutes"
+      }
+    },
+    "sources": null,
+    "licenses": [
+      {
+        "name": "CC-BY-4.0",
+        "title": "Creative Commons Attribution 4.0 International",
+        "path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+        "instruction": "https://tldrlegal.com/license/creative-commons-attribution-4.0-international-(cc-by-4)",
+        "attribution": "\u00a9 FfE, BDL Project"
+      }
+    ],
+    "contributors": null,
+    "resources": [
+      {
+        "profile": "tabular-data-resource",
+        "name": "opendata.opendata",
+        "path": "http://opendata.ffe.de:3000/opendata?id_opendata=eq.86",
+        "format": "PostgreSQL",
+        "encoding": "UTF-8",
+        "schema": {
+          "fields": [
+            {
+              "name": "id",
+              "description": "Unique identifier",
+              "type": "serial",
+              "unit": null
+            },
+            {
+              "name": "id_opendata",
+              "description": "Dataset identifier",
+              "type": "integer",
+              "unit": null
+            },
+            {
+              "name": "id_region_type",
+              "description": "Region type identifier",
+              "type": "integer",
+              "unit": null
+            },
+            {
+              "name": "region_type",
+              "description": "Region type name",
+              "type": "text",
+              "unit": null
+            },
+            {
+              "name": "id_region",
+              "description": "Region identifer",
+              "type": "integer",
+              "unit": null
+            },
+            {
+              "name": "region",
+              "description": "Region name",
+              "type": "text",
+              "unit": null
+            },
+            {
+              "name": "year",
+              "description": "Simulation year",
+              "type": "integer",
+              "unit": null
+            },
+            {
+              "name": "year_weather",
+              "description": "Weather year",
+              "type": "integer",
+              "unit": null
+            },
+            {
+              "name": "internal_id_type",
+              "description": "The tuple of internal_id_type and internal_id allows to categorize datasets. internal_id_type is superior to internal_id. An overview of internal_id_types can be found here: http://opendata.ffe.de:3000/v_internal_id_type",
+              "type": "integer[]",
+              "unit": null
+            },
+            {
+              "name": "internal_id",
+              "description": [
+                "The tuple of internal_id_type and internal_id allows to categorize datasets. internal_id_type is superior to internal_id. An overview of internal_ids can be found here: http://opendata.ffe.de:3000/v_internal_id",
+                "internal_id_type[1] = 256: Customer ID\ninternal_id[1] = 1: Customer 1\ninternal_id[1] = 2: Customer 2\ninternal_id[1] = 3: Customer 3\ninternal_id[1] = 4: Customer 4\ninternal_id[1] = 5: Customer 5\ninternal_id[1] = 6: Customer 6\ninternal_id[1] = 7: Customer 7\ninternal_id[1] = 8: Customer 8\ninternal_id[1] = 9: Customer 9\ninternal_id[1] = 10: Customer 10\ninternal_id[1] = 11: Customer 11\ninternal_id[1] = 12: Customer 12\ninternal_id[1] = 13: Customer 13\ninternal_id[1] = 14: Customer 14\ninternal_id[1] = 15: Customer 15\ninternal_id[1] = 16: Customer 16\ninternal_id[1] = 17: Customer 17\ninternal_id[1] = 18: Customer 18\ninternal_id[1] = 19: Customer 19\ninternal_id[1] = 20: Customer 20\n\ninternal_id_type[2] = 255: BCM Customer Data Column\ninternal_id[2] = 1: Timestamp UTC\ninternal_id[2] = 2: Power GCP\ninternal_id[2] = 3: Power PV\ninternal_id[2] = 4: Power EVSE\ninternal_id[2] = 5: Power Household\ninternal_id[2] = 6: Connection\ninternal_id[2] = 7: SoC\ninternal_id[2] = 8: Target SoC\ninternal_id[2] = 9: PV Capacity\ninternal_id[2] = 10: Start of PV UC\ninternal_id[2] = 11: End of PV UC\ninternal_id[2] = 12: 2nd Start of PV UC\ninternal_id[2] = 13: 2nd End of PV UC\ninternal_id[2] = 14: Start of Intraday UC\ninternal_id[2] = 15: End of Intraday UC"
+              ],
+              "type": "integer[]",
+              "unit": null
+            },
+            {
+              "name": "value",
+              "description": "Value",
+              "type": "double precision",
+              "unit": null
+            },
+            {
+              "name": "values",
+              "description": "Values",
+              "type": "double precision[]",
+              "unit": "see internal_id[3]"
+            },
+            {
+              "name": "id_region_type_to",
+              "description": "Destination region type identifier",
+              "integer": "geometry",
+              "unit": null
+            },
+            {
+              "name": "id_region_to",
+              "description": "Destination region identifier",
+              "integer": "geometry",
+              "unit": null
+            },
+            {
+              "name": "geom",
+              "description": "(Generalized) Geometry of region or",
+              "type": "geometry",
+              "unit": null
+            },
+            {
+              "name": "rast",
+              "description": "Raster",
+              "type": "raster",
+              "unit": null
+            },
+            {
+              "name": "id_geom",
+              "description": "Geometry identifier (if geom is not a region geom)",
+              "type": "integer",
+              "unit": null
+            },
+            {
+              "name": "attributes",
+              "description": "Additional attributes",
+              "type": "json",
+              "unit": null
+            }
+          ]
+        },
+        "dialect": null
+      }
+    ],
+    "review": null,
+    "medaMetadata": {
+      "metadataVersion": "OEP-1.4.0",
+      "metadataLicense": {
+        "name": "CC0-1.0",
+        "title": "Creative Commons Zero v1.0 Universal",
+        "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }
+    },
+    "comment": {
+      "metadata": "Metadata documentation and explanation (https://github.com/OpenEnergyPlatform/organisation/wiki/metadata)",
+      "dates": "Dates and time must follow the ISO8601 including time zone (YYYY-MM-DD or YYYY-MM-DDThh:mm:ss\u00b1hh)",
+      "units": "Use a space between numbers and units (100 m)",
+      "languages": "Languages must follow the IETF (BCP47) format (en-GB, en-US, de-DE)",
+      "licenses": "License name must follow the SPDX License List (https://spdx.org/licenses/)",
+      "review": "Following the OEP Data Review (https://github.com/OpenEnergyPlatform/data-preprocessing/wiki)",
+      "null": "If not applicable use (null)"
+    }
+  },
+  "ffe_metadata": {
+    "year_weather": null,
+    "id_region_type": null,
+    "geometries_simple": null
+  }
+}
